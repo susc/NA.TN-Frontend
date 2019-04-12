@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="256" y1="256" x2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b3be1"/>
+      <stop offset="1" stop-color="#0d3b99"/>
+    </linearGradient>
+    <filter id="filter" x="54" y="46" width="154" height="171" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="4.243" dy="4.243" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.646"/>
+      <feFlood result="flood" flood-opacity="0.51"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feGaussianBlur result="blur-2" stdDeviation="2.333" in="SourceAlpha"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feComposite result="composite-4"/>
+      <feFlood result="flood-2" flood-color="#fff" flood-opacity="0.47"/>
+      <feComposite result="composite-5" operator="in" in2="composite-4"/>
+      <feBlend result="blend" mode="colorDodge" in2="composite"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+      <feFlood result="flood-3" flood-color="#d0c4db"/>
+      <feComposite result="composite-6" operator="in" in2="SourceAlpha"/>
+      <feOffset result="offset-2" dx="-22.404" dy="-44.7"/>
+      <feOffset result="offset-3" dx="22.404" dy="44.7" in="composite-6"/>
+      <feComposite result="composite-7" operator="xor" in="offset-2"/>
+      <feComposite result="composite-10" operator="xor" in2="composite-6"/>
+      <feComposite result="composite-8" operator="in" in2="SourceAlpha"/>
+      <feGaussianBlur result="blur-3" stdDeviation="8.944"/>
+      <feComponentTransfer result="comp">
+        <feFuncA type="linear" slope="0.24"/>
+      </feComponentTransfer>
+      <feComposite result="composite-9" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend-3" in2="blend-2"/>
+    </filter>
+  </defs>
+  <rect id="圆角矩形_1_拷贝" data-name="圆角矩形 1 拷贝" class="cls-1" width="256" height="256" rx="20" ry="20"/>
+  <path id="N.svg_拷贝" data-name="N.svg 拷贝" class="cls-2" d="M194.953,52.387H164.387v86.23q0,15.432.976,20.9h-0.488q-1.368-2.539-7.52-12.012L95.637,52.387H60.481V203.656H91.047V117.621A237.923,237.923,0,0,0,90.168,93.5h0.488a114.283,114.283,0,0,0,7.227,12.305l64.062,97.851h33.008V52.387Z"/>
+</svg>
