@@ -74,7 +74,7 @@ module.exports = {
     ]
   },
   bootstrapVue: {
-    componentPlugins: ['Badge', 'Button', 'ButtonGroup', 'ButtonToolbar', 'Card', 'Dropdown', 'Form', 'FormCheckbox', 'FormGroup', 'FormInput', 'InputGroup', 'LayoutAndGridSystem', 'Link', 'Modal', 'Nav', 'Navbar'],
+    componentPlugins: ['Badge', 'Button', 'ButtonGroup', 'ButtonToolbar', 'Card', 'Dropdown', 'Form', 'FormCheckbox', 'FormGroup', 'FormInput', 'InputGroup', 'Link', 'Modal', 'Nav', 'Navbar'],
     directivePlugins: []
   }
 }
