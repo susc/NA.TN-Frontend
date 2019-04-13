@@ -1,6 +1,6 @@
 <template>
     <div class="footer bg-dark text-center py-1" id="footer">
-        <p class="my-3">© 2017-{{ currentYear }} <a href="/">NA.TN 短链接服务</a> — All Rights Reserved.</p>
+        <p class="my-3"><font-awesome-icon :icon="['far', 'copyright']" />2017-{{ currentYear }} <nuxt-link to="/">NA.TN 短链接服务</nuxt-link> — All Rights Reserved.</p>
     </div>
 </template>
 

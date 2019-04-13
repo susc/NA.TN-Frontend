@@ -65,7 +65,7 @@ module.exports = {
       },
       {
         set: '@fortawesome/free-regular-svg-icons',
-        icons: ['faEnvelope', 'faCalendarCheck']
+        icons: ['faEnvelope', 'faCalendarCheck', 'faCopyright']
       },
       /*{
         set: '@fortawesome/free-brands-svg-icons',
