@@ -26,7 +26,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    analyze: true,
+    //analyze: true,
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -72,10 +72,6 @@ module.exports = {
         icons: ['fab']
       },*/
     ]
-  },
-  bootstrapVue: {
-    componentPlugins: ['Badge', 'Button', 'ButtonGroup', 'ButtonToolbar', 'Card', 'Dropdown', 'Form', 'FormCheckbox', 'FormGroup', 'FormInput', 'InputGroup', 'Link', 'Modal', 'Nav', 'Navbar'],
-    directivePlugins: []
   }
 }
 
