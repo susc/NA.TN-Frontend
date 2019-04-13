@@ -35,6 +35,12 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      //开发环境使用analyze模式进行build
+      if (isDev) {
+        config.module.rules.push({
+          analyze: true
+        })
+      }
     },
     publicPath: 'https://staticserv-10056609.file.myqcloud.com/na_tn/public/'
   },
@@ -60,11 +66,11 @@ module.exports = {
     imports: [
       {
         set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas']
+        icons: ['faExclamationCircle', 'faHome', 'faLink', 'faCog', 'faSignOutAlt', 'faInfoCircle', 'faCheckCircle', 'faUserPlus', 'faTimesCircle', 'faSignInAlt', 'faHeart', 'faCopy', 'faExclamationTriangle']
       },
       {
         set: '@fortawesome/free-regular-svg-icons',
-        icons: ['far']
+        icons: ['faEnvelope', 'faCalendarCheck']
       },
       /*{
         set: '@fortawesome/free-brands-svg-icons',
