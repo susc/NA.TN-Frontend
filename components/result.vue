@@ -1,5 +1,5 @@
 <template>
-    <div class="result" v-show="status !== ''">
+    <div class="result" v-if="status !== ''">
         <div class="result-title" v-if="status === 'success'">
             <span class="result-success"><font-awesome-icon :icon="['fas', 'check-circle']" class="text-success"/><span style="margin-left: 10px; font-weight: 300;">创建成功</span></span>
         </div>
