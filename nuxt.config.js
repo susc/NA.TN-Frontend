@@ -26,6 +26,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+    analyze: true,
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -33,12 +34,6 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
-        })
-      }
-      //开发环境使用analyze模式进行build
-      if (isDev) {
-        config.module.rules.push({
-          analyze: true
         })
       }
     },
@@ -77,6 +72,10 @@ module.exports = {
         icons: ['fab']
       },*/
     ]
+  },
+  bootstrapVue: {
+    componentPlugins: ['Badge', 'Button', 'ButtonGroup', 'ButtonToolbar', 'Card', 'Dropdown', 'Form', 'FormCheckbox', 'FormGroup', 'FormInput', 'InputGroup', 'LayoutAndGridSystem', 'Link', 'Modal', 'Nav', 'Navbar'],
+    directivePlugins: []
   }
 }
 
