@@ -1,8 +1,10 @@
 # NA.TN-Frontend
 >This is a repository of the frontend part of [NA.TN Short URL Service][1].
+**Notice**: This is a personal project for reference only.
 
 ## Introduction
 The frontend part of [NA.TN][1] is powered by [NUXT.js][2]. Just by executing some simple commands the system would run perfectly.
+
 
 ## Usage
 
