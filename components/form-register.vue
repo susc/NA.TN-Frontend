@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="container mt-5">
-            <b-card header-tag="header" class="form-card shadow-sm" header-bg-variant="primary" header-text-variant="white">
+            <b-card header-tag="header" class="form-card shadow-sm" header-bg-variant="light" header-text-variant="black">
                 <h6 slot="header" class="mb-0 form-title">
                     <font-awesome-icon :icon="['fas', 'user-plus']" />
                     注册

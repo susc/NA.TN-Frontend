@@ -1,32 +1,36 @@
 <template>
     <div>
         <div class="container mt-5">
-            <b-card header-tag="header" class="form-card shadow-sm" header-bg-variant="primary" header-text-variant="white">
-                <h6 slot="header" class="mb-0 form-title">
-                    <font-awesome-icon :icon="['fas', 'sign-in-alt']" />
-                    登录
-                </h6>
-                <b-form @reset="onReset" @submit.prevent="handleLogin">
-                    <b-form-group id="emailGroup" label="电子邮箱：" label-for="emailInput">
-                        <b-form-input id="emailInput" type="email" @input="clearEmailAlert" v-model="email" required placeholder="请输入您的电子邮箱">
-                        </b-form-input>
-                        <transition name="page">
-                            <small class="text-danger" v-if="emailAlert != ''">{{ emailAlert }}</small>
-                        </transition>
-                    </b-form-group>
-                    <b-form-group id="passwordGroup" label="密码：" label-for="passwordInput">
-                        <b-form-input id="passwordInput" type="password" @input="clearPasswordAlert" v-model="password" required placeholder="请输入您的密码">
-                        </b-form-input>
-                        <transition name="page">
-                            <small class="text-danger" v-if="passwordAlert != ''">{{ passwordAlert }}</small>
-                        </transition>
-                    </b-form-group>
-                    <b-button type="submit" variant="primary">登录</b-button>
-                    <transition name="page">
-                        <b-button type="reset" variant="danger" v-show="showReset">重置</b-button>
-                    </transition>
-                </b-form>
-            </b-card>
+            <b-row class="justify-content-md-center">
+                <b-col col md="6">
+                    <b-card header-tag="header" class="form-card shadow-sm " header-bg-variant="light" header-text-variant="black">
+                        <h6 slot="header" class="mb-0 form-title">
+                            <font-awesome-icon :icon="['fas', 'sign-in-alt']" />
+                            登录
+                        </h6>
+                        <b-form @reset="onReset" @submit.prevent="handleLogin">
+                            <b-form-group id="emailGroup" label="电子邮箱：" label-for="emailInput">
+                                <b-form-input id="emailInput" type="email" @input="clearEmailAlert" v-model="email" required placeholder="请输入您的电子邮箱">
+                                </b-form-input>
+                                <transition name="page">
+                                    <small class="text-danger" v-if="emailAlert != ''">{{ emailAlert }}</small>
+                                </transition>
+                            </b-form-group>
+                            <b-form-group id="passwordGroup" label="密码：" label-for="passwordInput">
+                                <b-form-input id="passwordInput" type="password" @input="clearPasswordAlert" v-model="password" required placeholder="请输入您的密码">
+                                </b-form-input>
+                                <transition name="page">
+                                    <small class="text-danger" v-if="passwordAlert != ''">{{ passwordAlert }}</small>
+                                </transition>
+                            </b-form-group>
+                            <b-button type="submit" variant="primary">登录</b-button>
+                            <transition name="page">
+                                <b-button type="reset" variant="danger" v-show="showReset">重置</b-button>
+                            </transition>
+                        </b-form>
+                    </b-card>
+                </b-col>
+            </b-row>
         </div>
         
         <b-modal ref="loginFailedModal" hide-footer hide-header lazy>

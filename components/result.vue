@@ -62,12 +62,27 @@ export default {
                 const el = document.getElementById(id);
                 el.select();
                 document.execCommand("Copy");
+                this.$message({
+                    showClose: true,
+                    message: '复制成功',
+                    type: 'success'
+                })
                 return true;
             }
             if(window.clipboardData) {
                 window.clipboardData.setData("Text", url);
+                this.$message({
+                    showClose: true,
+                    message: '复制成功',
+                    type: 'success'
+                })
                 return true;
             }
+            this.$message({
+                    showClose: true,
+                    message: '复制失败，请尝试手工复制',
+                    type: 'error'
+                })
             return false;
         }
     },

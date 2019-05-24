@@ -26,7 +26,8 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    //analyze: true,
+    analyze: true,
+    optimizeCSS: true,
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -36,6 +37,17 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    },
+    babel: {
+      plugins: [
+        [
+          "component",
+          {
+            "libraryName": "element-ui",
+            "styleLibraryName": "theme-chalk"
+          }
+        ]
+      ]
     },
     publicPath: 'https://staticserv-10056609.file.myqcloud.com/na_tn/public/'
   },
@@ -55,6 +67,9 @@ module.exports = {
     },
     {
       src: '~/plugins/vue-cookie'
+    },
+    {
+      src: '~/plugins/element-ui'
     }
   ],
   fontawesome: {

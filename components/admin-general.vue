@@ -1,16 +1,18 @@
 <template>
     <b-container>
-        <b-card header-tag="header" class="shadow-sm mt-5" header-bg-variant="info" header-text-variant="white">
-            <h2 class="h6 mb-0" slot="header">
-                <font-awesome-icon :icon="['fas', 'exclamation-circle']" />
-                系统概况
-            </h2>
-            <div>
+
+        <el-card class="box-card mt-5">
+            <div slot="header" class="clearfix">
+                <span>系统概况</span>
+                <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+            </div>
+            <div class="item-list">
                 <p>当前总链接数：{{ linkCount }}</p>
                 <p>当前总点击数：{{ clickCount }}</p>
                 <p>当前用户总数：{{ userCount }}</p>
             </div>
-        </b-card>
+        </el-card>
+
     </b-container>
 </template>
 
@@ -54,5 +56,8 @@ export default {
 </script>
 
 <style>
-
+.item-list{
+    font-size: 15px;
+    color: #666
+}
 </style>

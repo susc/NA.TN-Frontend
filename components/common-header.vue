@@ -1,6 +1,6 @@
 <template>
     <div class="nabbar-wrapper">
-        <b-navbar toggleable="md" class="bg-light shadow-sm">
+        <b-navbar toggleable="md" class="shadow-sm white">
             <b-navbar-brand href="/">
                 <b-img :src="require('~/assets/images/logo.svg')" width="32" height="32"></b-img>
                 NA.TN 短链接服务
@@ -8,6 +8,7 @@
             <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
             <b-collapse is-nav id="nav_collapse">
                 <b-navbar-nav>
+                    <!--
                     <b-nav-item href="/">
                         <font-awesome-icon :icon="['fas', 'home']" />
                         首页
@@ -22,6 +23,7 @@
                         贴吧签到系统
                         <b-badge variant="danger">Hot</b-badge>
                     </b-nav-item>
+                    -->
                 </b-navbar-nav>
 
                 <b-navbar-nav class="ml-auto" v-if="ready && logined">
@@ -116,5 +118,8 @@ export default {
 </script>
 
 <style>
+.white {
+    background: white;
+}
 
 </style>

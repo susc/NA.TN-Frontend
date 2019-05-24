@@ -7,7 +7,7 @@
                     生成短链接
                 </h6>
                 
-                <b-form @reset="onReset">
+                <b-form @reset="onReset" v-loading="isProcessing">
                     <b-form-group id="realUrlInputGroup" description="必填，我们将帮您缩短它">
                         <label for="realUrlInput">原始链接<sup><span class="text-danger">*</span></sup></label>
                         <b-form-input id="realUrlInput" type="text" v-model="url" required placeholder="请输入原始链接"></b-form-input>

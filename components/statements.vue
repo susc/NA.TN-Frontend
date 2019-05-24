@@ -1,6 +1,6 @@
 <template>
     <div class="statements">
-        <b-card header-tag="header" class="mb-3 shadow-sm" header-bg-variant="info" header-text-variant="white">
+        <b-card header-tag="header" class="mb-3 shadow-sm" header-bg-variant="primary" header-text-variant="white">
             <h2 class="h6 mb-0" slot="header">
                 <font-awesome-icon :icon="['fas', 'exclamation-circle']" />
                 免责声明
