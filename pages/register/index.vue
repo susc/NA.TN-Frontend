@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-loading.fullscreen="!ready">
         <common-header></common-header>
         <form-register v-if="ready && !logined"></form-register>
         <div class="loginedtips container mt-5" v-if="ready && logined">

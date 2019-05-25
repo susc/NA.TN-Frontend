@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import {
-    Pagination,
+    /*Pagination,
     Dialog,
     Autocomplete,
     Dropdown,
@@ -9,9 +9,9 @@ import {
     Menu,
     Submenu,
     MenuItem,
-    MenuItemGroup,
+    MenuItemGroup,*/
     Input,
-    InputNumber,
+    /*InputNumber,
     Radio,
     RadioGroup,
     RadioButton,
@@ -46,9 +46,9 @@ import {
     Col,
     Upload,
     Progress,
-    Badge,
+    Badge,*/
     Card,
-    Rate,
+    /*Rate,
     Steps,
     Step,
     Carousel,
@@ -62,14 +62,14 @@ import {
     Header,
     Aside,
     Main,
-    Footer,
+    Footer,*/
     Loading,
     MessageBox,
     Message,
     Notification
   } from 'element-ui';
   
-  Vue.use(Pagination);
+  /*Vue.use(Pagination);
   Vue.use(Dialog);
   Vue.use(Autocomplete);
   Vue.use(Dropdown);
@@ -78,9 +78,9 @@ import {
   Vue.use(Menu);
   Vue.use(Submenu);
   Vue.use(MenuItem);
-  Vue.use(MenuItemGroup);
+  Vue.use(MenuItemGroup);*/
   Vue.use(Input);
-  Vue.use(InputNumber);
+  /*Vue.use(InputNumber);
   Vue.use(Radio);
   Vue.use(RadioGroup);
   Vue.use(RadioButton);
@@ -115,9 +115,9 @@ import {
   Vue.use(Col);
   Vue.use(Upload);
   Vue.use(Progress);
-  Vue.use(Badge);
+  Vue.use(Badge);*/
   Vue.use(Card);
-  Vue.use(Rate);
+  /*Vue.use(Rate);
   Vue.use(Steps);
   Vue.use(Step);
   Vue.use(Carousel);
@@ -131,7 +131,7 @@ import {
   Vue.use(Header);
   Vue.use(Aside);
   Vue.use(Main);
-  Vue.use(Footer);
+  Vue.use(Footer);*/
   
   Vue.use(Loading.directive);
   
