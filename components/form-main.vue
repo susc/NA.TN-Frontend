@@ -33,6 +33,7 @@
 import Vue from 'vue'
 //引入公共事件总线
 import bus from '~/assets/bus.js'
+import md5 from 'js-md5'
 
 export default {
     name: "form-main",
@@ -83,7 +84,8 @@ export default {
                 alias: this.alias,
                 email: email,
                 token: token,
-                mode: this.selectedMode
+                mode: this.selectedMode,
+                validator: md5(String(this.url) + String(this.email) + String(this.token))
             };
             this.$http.post('https://api.na.tn/shorturl/', body, {emulateJSON: true, timeout: 10000}).then(
                 response => {

@@ -25,11 +25,10 @@ export default {
 }
 </script>
 
-<style>
-.footer {
-    color: #fff;
+<style scoped>
+p {
+    font-size: 14px;
 }
-
 /*@media (min-width: 768px) {
     .footer {
         position: fixed;

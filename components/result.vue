@@ -127,8 +127,9 @@ export default {
 
 .error-reason {
     text-align: center;
-    margin: 50px 0 100px;
+    padding: 50px 0 100px;
     font-weight: 300;
+    margin: 0;
 }
 
 .result .form-group svg {
@@ -142,5 +143,9 @@ export default {
     width: 276px;
     padding: 10px;
     margin: 0 auto;
+}
+
+.result {
+    opacity: 0;
 }
 </style>
