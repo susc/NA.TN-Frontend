@@ -35,11 +35,11 @@
                             </div>
                         </el-collapse-transition>
 
-                        <el-collapse-transition>
-                        <div class="description" slot="description" v-if="useAlias == true">
-                            <span class="text-muted small form-text">选填</span>
-                        </div>
-                        </el-collapse-transition>
+                        <!--<el-collapse-transition>
+                            <div class="description" slot="description" v-if="useAlias == true">
+                                <span class="text-muted small form-text">选填</span>
+                            </div>
+                        </el-collapse-transition>-->
                     </b-form-group>
 
                     <!--<b-form-group id="modeInputGroup" :description="'必填'+(modeDescription==''?'':('（'+modeDescription+'）'))">
