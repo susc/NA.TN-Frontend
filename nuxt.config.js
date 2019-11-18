@@ -26,7 +26,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    analyze: true,
+    //analyze: true,
     optimizeCSS: true,
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
@@ -70,6 +70,10 @@ module.exports = {
     },
     {
       src: '~/plugins/element-ui'
+    },
+    {
+      src: '~/plugins/ga.js',
+      ssr: false
     }
   ],
   fontawesome: {

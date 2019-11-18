@@ -26,12 +26,22 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import { Card } from 'element-ui'
+
+Vue.use(Card)
+
 export default {
 
 }
 </script>
 
 <style>
+.info-title {
+    background: #409EFF;
+    color: white;
+}
+
 .statements {
     margin-top: 48px;
 }

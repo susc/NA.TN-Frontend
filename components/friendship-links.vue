@@ -12,16 +12,36 @@
         </h5>
         
         <b-container>
-            <b-nav>
-                <slot></slot>
+            <b-nav v-if="flinks!=[]">
+                <b-nav-item v-for="link in flinks" :key="link.id" :href="link.url" :target="link.new_window? '_blank': ''">{{ link.title }}</b-nav-item>
             </b-nav>
         </b-container>
     </b-container>
 </template>
 
 <script>
+import Vue from 'vue'
+
 export default {
-    
+    data() {
+        return {
+            flinks: []
+        }
+    },
+    mounted() {
+        Vue.http.get('https://api.na.tn/shorturl/?action=getfriendshiplinks', {timeout: 10000}).then(
+            (res) => {
+                this.flinks = res.body.data;
+            },
+            (res) => {
+                this.$notify.error({
+                    title: '错误',
+                    message: '友情链接加载失败'
+                });
+                this.flinks = [];
+            }
+        )
+    }
 }
 </script>
 

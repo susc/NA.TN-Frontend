@@ -12,16 +12,20 @@
                 <b-collapse is-nav id="nav_collapse">
                     <b-navbar-nav class="ml-auto" v-if="ready && logined">
                         <b-nav-text>欢迎你</b-nav-text>
+                        
+                        <!-- 下拉菜单 -->
                         <b-nav-item-dropdown right>
                             <template slot="button-content">
                                 <em>{{ email }}</em>
                             </template>
-                            <b-dropdown-item href="#" @click="showCommingSoonModal"><font-awesome-icon :icon="['fas', 'link']" class="text-primary mr-2"/>我的链接</b-dropdown-item>
-                            <b-dropdown-item href="#" @click="showCommingSoonModal"><font-awesome-icon :icon="['fas', 'cog']" class="text-dark mr-2"/>账号设置</b-dropdown-item>
-                            <b-dropdown-divider></b-dropdown-divider>
-                            <b-dropdown-item @click="handleLogout"><font-awesome-icon :icon="['fas', 'sign-out-alt']" class="text-danger mr-2"/>退出登录</b-dropdown-item>
+                                <b-dropdown-item href="#" @click="showCommingSoonModal"><font-awesome-icon :icon="['fas', 'link']" class="text-primary mr-2"/>我的链接</b-dropdown-item>
+                                <b-dropdown-item href="#" @click="showCommingSoonModal"><font-awesome-icon :icon="['fas', 'cog']" class="text-dark mr-2"/>账号设置</b-dropdown-item>
+                                <b-dropdown-divider></b-dropdown-divider>
+                                <b-dropdown-item @click="handleLogout"><font-awesome-icon :icon="['fas', 'sign-out-alt']" class="text-danger mr-2"/>退出登录</b-dropdown-item>
                         </b-nav-item-dropdown>
                     </b-navbar-nav>
+
+                    <!-- 注册/登录 -->
                     <b-navbar-nav class="ml-auto" v-if="ready && !logined">
                         <nuxt-link to="/login">
                             <b-nav-item href="/login">登录</b-nav-item>
@@ -30,10 +34,14 @@
                             <b-nav-item href="/register">注册</b-nav-item>
                         </nuxt-link>
                     </b-navbar-nav>
+
                 </b-collapse>
+
             </b-container>
+
         </b-navbar>
 
+        <!-- 敬请期待提示框 -->
         <b-modal ref="commingSoonModal" hide-footer hide-header lazy>
             <div class="d-block text-center">
                 <h3 class="h2 my-4"><font-awesome-icon :icon="['fas', 'info-circle']" class="mr-3 text-info"/>提示</h3>
@@ -45,6 +53,11 @@
 </template>
 
 <script>
+import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
+import Vue from 'vue'
+
+Vue.component(CollapseTransition.name, CollapseTransition)
+
 export default {
     mounted: function() {
         this.email = this.$cookie.get('email')
