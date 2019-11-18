@@ -63,3 +63,6 @@ typings/
 # NUXT
 .nuxt
 dist
+
+# Visual Studio Code
+.vs
