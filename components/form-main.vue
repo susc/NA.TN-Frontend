@@ -10,42 +10,8 @@
                 <b-form @reset="onReset" v-loading="isProcessing">
                     <b-form-group id="realUrlInputGroup">
                         <label for="realUrlInput">原始链接<sup><span class="text-danger">*</span></sup></label>
-                        <!--<b-form-input id="realUrlInput" type="text" v-model="url" required placeholder="请输入原始链接"></b-form-input>-->
                         <el-input id="realUrlInput" type="text" v-model="url" required placeholder="请输入原始链接"></el-input>
                     </b-form-group>
-
-                    <b-form-group id="aliasInputGroup">
-                        <!--<b-input-group prepend="https://na.tn/" class="mb-2 mr-sm-2 mb-sm-0">
-                            <b-input type="text" id="aliasInput" v-model="alias" placeholder="您可以自定义链接后缀"></b-input>
-                        </b-input-group>-->
-
-                        <div class="label" slot="label" for="aliasInput">
-                            <span>自定义后缀</span>
-                            <el-switch
-                                v-model="useAlias"
-                                active-color="#13ce66"
-                                @change="handleUseAliasSwitch">
-                            </el-switch>
-                        </div>
-                        <el-collapse-transition>
-                            <div v-if="useAlias == true">
-                                <el-input id="aliasInput" v-model="alias" placeholder="您可以自定义链接后缀" v-if="useAlias == true">
-                                    <template slot="prepend">https://na.tn/</template>
-                                </el-input>
-                            </div>
-                        </el-collapse-transition>
-
-                        <!--<el-collapse-transition>
-                            <div class="description" slot="description" v-if="useAlias == true">
-                                <span class="text-muted small form-text">选填</span>
-                            </div>
-                        </el-collapse-transition>-->
-                    </b-form-group>
-
-                    <!--<b-form-group id="modeInputGroup" :description="'必填'+(modeDescription==''?'':('（'+modeDescription+'）'))">
-                        <label for="modeInput">跳转模式<sup><span class="text-danger">*</span></sup></label>
-                        <b-form-select v-model="selectedMode" :options="mode"></b-form-select>
-                    </b-form-group>-->
 
                     <b-form-group id="modeInputGroup">
                         <div class="form-mode">
@@ -62,6 +28,24 @@
                                 </el-select>
                             </div>
                         </div>
+                    </b-form-group>
+
+                    <b-form-group id="aliasInputGroup">
+                        <div class="label" slot="label" for="aliasInput">
+                            <span>自定义后缀</span>
+                            <el-switch
+                                v-model="useAlias"
+                                active-color="#13ce66"
+                                @change="handleUseAliasSwitch">
+                            </el-switch>
+                        </div>
+                        <el-collapse-transition>
+                            <div v-if="useAlias == true">
+                                <el-input id="aliasInput" v-model="alias" placeholder="您可以自定义链接后缀" v-if="useAlias == true">
+                                    <template slot="prepend">https://na.tn/</template>
+                                </el-input>
+                            </div>
+                        </el-collapse-transition>
                     </b-form-group>
 
                     <b-button type="button" class="mr-2" @click="handleShorten" variant="primary" :disabled="isProcessing">生成</b-button>
