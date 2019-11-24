@@ -75,7 +75,7 @@ export default {
 }
 
 .flink-content {
-    margin: 5px 10px;
+    margin: 0 10px;
     text-align: center;
     white-space: nowrap;
     text-overflow: ellipsis;

@@ -80,6 +80,10 @@ export default {
                         if(response.body.code == 200) {
                             this.$cookie.set('email', this.email, {expires: 7})
                             this.$cookie.set('token', response.body.data.token, {expires: 7})
+                            this.$message({
+                                type: 'success',
+                                message: '登录成功!'
+                            });
                             window.location.href = '/'
                         }else{
                             this.loginFailedReason = response.body.message;
