@@ -18,11 +18,19 @@
                     <span>友情链接</span>
                 </el-divider>
 
-                <b-container class="flinks" v-if="flinks !== []">
+                <!--<b-container class="flinks" v-if="flinks !== []">
                     <b-nav v-if="flinks!=[]">
                         <b-nav-item v-for="link in flinks" :key="link.id" :href="link.url" :target="link.new_window? '_blank': ''">{{ link.title }}</b-nav-item>
                     </b-nav>
-                </b-container>
+                </b-container>-->
+
+                <el-row>
+                    <el-col :sm="{span: 6}" :span="12" v-for="link in flinks" :key="link.id">
+                        <div class="flink-content">
+                            <el-link :underline="false" :href="link.url" :target="link.new_window? '_blank': ''">{{ link.title }}</el-link>
+                        </div>
+                    </el-col>
+                </el-row>
             </div>
         </el-collapse-transition>
     </b-container>
@@ -30,9 +38,12 @@
 
 <script>
 import Vue from 'vue'
-import { Divider } from 'element-ui'
+import { Divider, Row, Col, Link } from 'element-ui'
 
 Vue.use(Divider)
+Vue.use(Row)
+Vue.use(Col)
+Vue.use(Link)
 
 export default {
     data() {
@@ -61,5 +72,13 @@ export default {
 <style scoped>
 .flinks {
     font-size: 15px;
+}
+
+.flink-content {
+    margin: 5px 10px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 </style>
