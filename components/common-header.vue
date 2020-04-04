@@ -3,7 +3,7 @@
     <div class="flex justify-between">
       <div class="flex justify-center">
         <a class="flex justify-center" href="/">
-          <img class="block w-6 h-6" src="/logo.jpg" alt="LOGO">
+          <img class="block w-6 h-6" src="https://static.ewrt.top/linksystem/logo.jpg" alt="LOGO">
           <h1 class="block ml-2 text-lg m-0">NA.TN 短链接服务</h1>
         </a>
       </div>

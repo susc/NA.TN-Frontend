@@ -4,7 +4,7 @@
       <div class="my-4 sm:flex">
 
         <div class="flex justify-center">
-          <embed class="w-48 h-48 sm:ml-4 sm:mr-8" src="/urlerror_error.svg">
+          <embed class="w-48 h-48 sm:ml-4 sm:mr-8" src="https://static.ewrt.top/linksystem/public/svg/urlerror_error.svg">
         </div>
 
         <div class="mt-4">

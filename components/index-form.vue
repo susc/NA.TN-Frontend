@@ -10,7 +10,7 @@
               <object
                 class="h-32"
                 type="image/svg+xml"
-                data="/link_shortener.svg">
+                data="https://static.ewrt.top/linksystem/public/svg/link_shortener.svg">
               </object>
             </div>
           </div>

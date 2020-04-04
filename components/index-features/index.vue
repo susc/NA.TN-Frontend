@@ -27,25 +27,25 @@
             id: 1,
             title: '链接安全',
             desc: '我们通过链接安全检测系统为您的链接安全保驾护航',
-            icon: '/feature_security.svg'
+            icon: 'https://static.ewrt.top/linksystem/public/svg/feature_security.svg'
           },
           {
             id: 2,
             title: '简单易用',
             desc: '只需一键即可生成专属于你的短链接',
-            icon: '/feature_happy.svg'
+            icon: 'https://static.ewrt.top/linksystem/public/svg/feature_happy.svg'
           },
           {
             id: 3,
             title: '加密跳转',
             desc: '你可以给短链接加上密码，无惧链接内容泄露',
-            icon: '/feature_password.svg'
+            icon: 'https://static.ewrt.top/linksystem/public/svg/feature_password.svg'
           },
           {
             id: 4,
             title: '随时修改',
             desc: '你可以随时修改短链接的目标地址',
-            icon: '/feature_settings.svg'
+            icon: 'https://static.ewrt.top/linksystem/public/svg/feature_settings.svg'
           }
         ]
       }

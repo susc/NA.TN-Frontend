@@ -17,8 +17,16 @@ export default {
       { hid: 'Keywords', name: 'Keywords', content: 'NA.TN,短链接,压缩链接,短链接服务,短链接生成,短网址,短网址生成,链接缩短,缩短网址,长链接缩短' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: 'https://static.ewrt.top/linksystem/favicon.ico' }
+    ],
+    // script: [
+    //   // <script data-ad-client="ca-pub-7626663582147234" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    //   {
+    //     "data-ad-client": 'ca-pub-7626663582147234',
+    //     async: true,
+    //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+    //   }
+    // ]
   },
   /*
   ** Customize the progress-bar color
@@ -66,7 +74,7 @@ export default {
     */
     extend (config, ctx) {
     },
-    publicPath: 'https://staticserv-10056609.file.myqcloud.com/na_tn/public/'
+    publicPath: 'https://static.ewrt.top/linksystem/public/'
   }
 
 }
